@@ -4,7 +4,7 @@ const Square = ({ color }) => {
       style={{
         width: "100px",
         height: "100px",
-        backgroundColor: { color },
+        backgroundColor: color,
         marginTop: "20px",
       }}
     ></div>
