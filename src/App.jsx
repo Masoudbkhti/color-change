@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import Square from "./components/Square";
+import Select from "./components/Select";
 function App() {
   const [selectedColor, setSelectedColor] = useState("red");
   const [boxColor, setBoxColor] = useState("red");
@@ -11,22 +12,8 @@ function App() {
   };
   return (
     <>
-      <div>
-        <select value={selectedColor} onChange={handleBoxColor}>
-          <option value="blue">Blue</option>
-          <option value="red">Red</option>
-          <option value="green">Green</option>
-          <option value="yellow">Yellow</option>
-        </select>
-      </div>
-      <div
-        style={{
-          width: "100px",
-          height: "100px",
-          backgroundColor: boxColor,
-          marginTop: "20px",
-        }}
-      ></div>
+      <Select value={selectedColor} onChange={handleBoxColor} />
+      <Square color={boxColor} />
     </>
   );
 }
